@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _puts2 - function to put a string
+ * puts2 - function to put a string
  * @str: pass by ref
  * Return: nothing
  */
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int pos;
 
