@@ -1,14 +1,19 @@
+
 #include "main.h"
+
 /**
- * puts2 - function to put a string
- * @str: pass by ref
- * Return: nothing
+ * puts2 - Prints one char out of two of a string.
+ * @str: The string containing characters.
  */
 void puts2(char *str)
 {
-	int pos;
+	int index = 0, len = 0;
 
-	for (pos = 0 ; *(str + pos) != '\0' ; pos += 2)
-		_putchar(*(str + pos));
+	while (str[index++])
+		len++;
+
+	for (index = 0; index < len; index += 2)
+		_putchar(str[index]);
+
 	_putchar('\n');
 }
