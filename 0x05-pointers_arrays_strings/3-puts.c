@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _puts - function to put a string
  * @str: pass by ref
