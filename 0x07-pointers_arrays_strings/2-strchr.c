@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * _strchr - finding char in string
  * @s: pass by ref string
