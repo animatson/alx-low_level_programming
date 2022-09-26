@@ -1,21 +1,33 @@
-/**
- * _strspn - counting func
- * @s: pass by ref
- * @a: pass by ref
- * Return: counts
- */
-unsigned int _strspn(char *s, char *a)
-{
-	int i = 0, j = 0;
-	unsigned int count = 0;
+#include "holberton.h"
 
-	for (; s[i] != '\0' ; i++)
+/**
+ * _strspn - a function that gets the length of a prefix substring.
+ * @s: an input string
+ * @accept: an input character with to locate into string s
+ * Return: returns pointer to c position
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	int count = 0, flag;
+	char *start = accept;
+
+	while (*s)
 	{
-		for (; a[j] != '\0' ; j++)
+		flag = 0;
+		while (*accept)
 		{
-			if (s[i] == a[j])
-				++count;
+			if (*accept == *s)
+			{
+				count++;
+				flag = 1;
+				break;
+			}
+			accept++;
 		}
+		s++;
+		accept = start;
+		if (flag == 0)
+			break;
 	}
 	return (count);
 }
