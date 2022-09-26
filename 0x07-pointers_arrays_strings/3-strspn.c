@@ -1,8 +1,8 @@
 /**
- * _strspn - counting 
+ * _strspn - counting func
  * @s: pass by ref
  * @a: pass by ref
- * Return: number of counts
+ * Return: counts
  */
 unsigned int _strspn(char *s, char *a)
 {
