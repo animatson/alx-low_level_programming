@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - entry point of a program.
+ * @argc: argument count variable.
+ * @argv: argument vector variable.
+ * Return: always 0.
+ */
+int main(int argc, char *argv[])
+{
+	int coin[] = {25, 10, 5, 2, 1};
+	int val = atoi(argv[1]);
+	int chng = 0, i = 0;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+	}
+	
+	while (val > 0)
+	{
+		if (val >= coin[i])
+		{
+			val -= coin[i];
+			++chng;
+			i = 0;
+		}
+		else
+			++i;
+	}
+	printf("%d\n", chng);
+	return (0);
+}
